@@ -1,5 +1,26 @@
 ### Install latest Gazebo7: ###
+
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install gazebo7 -y
+
+git clone https://github.com/osrf/gazebo_models
+move all folders in gazebo_models to ~/.gazebo/models/
+
+make GAZEBO_MODEL_DATABASE_URI to ""
+
+sudo nano /usr/share/gazebo/setup.sh
+export GAZEBO_MODEL_DATABASE_URI="" # http://gazebosim.org/models
+
+cat /usr/share/gazebo/setup.sh
+
+export GAZEBO_MASTER_URI=http://localhost:11345
+export GAZEBO_MODEL_DATABASE_URI="" # http://gazebosim.org/models
+export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-7:${GAZEBO_RESOURCE_PATH}
+export GAZEBO_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gazebo-7/plugins:${GAZEBO_PLUGIN_PATH}
+export GAZEBO_MODEL_PATH=/usr/share/gazebo-7/models:${GAZEBO_MODEL_PATH}
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib/x86_64-linux-gnu/gazebo-7/plugins
+export OGRE_RESOURCE_PATH=/usr/lib/x86_64-linux-gnu/OGRE-1.9.0
+
+
