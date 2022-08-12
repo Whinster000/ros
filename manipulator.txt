@@ -12,3 +12,9 @@ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 cm
 sb
 
+# Convert xacro to urdf
+xacro --inorder open_manipulator.urdf.xacro > open_manipulator.urdf
+roslaunch my_robotics test.launch
+rosrun gazebo_ros spawn_model -file `rospack find open_manipulator_description`/urdf/open_manipulator.urdf -urdf -x 0 -y 0 -z 0 -model open_manipulator
+
+
