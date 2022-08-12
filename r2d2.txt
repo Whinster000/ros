@@ -1,0 +1,18 @@
+sudo apt-get install ros-kinetic-joint-state-publisher-gui
+sudo apt install ros-kinetic-urdf-tutorial
+
+Files located at:
+/opt/ros/kinetic/share/urdf_tutorial/urdf
+
+http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch
+
+
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/01-myfirst.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/02-multipleshapes.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/03-origins.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/04-materials.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/05-visual.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/06-flexible.urdf'
+roslaunch urdf_tutorial display.launch model:='$(find urdf_tutorial)/urdf/07-physics.urdf'
+
+
