@@ -1,0 +1,8 @@
+sudo apt install ros-kinetic-frontier-exploration ros-kinetic-navigation-stage
+
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=frontier_exploration
+
+rosrun map_server map_saver -f ~/my_map4
+
