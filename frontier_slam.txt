@@ -6,3 +6,6 @@ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=frontier_explorat
 
 rosrun map_server map_saver -f ~/my_map4
 
+OPTIONAL:
+sudo apt install ros-kinetic-dwa-local-planner
+
