@@ -2,8 +2,8 @@
 
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install gazebo7 -y
+sudo apt update
+sudo apt upgrade -y
 
 git clone https://github.com/osrf/gazebo_models
 move all folders in gazebo_models to ~/.gazebo/models/
